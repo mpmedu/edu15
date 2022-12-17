@@ -1,0 +1,237 @@
+ 
+/* Global 
+   ======================================= */
+    
+/* 
+* {
+  cursor:default;    
+  box-sizing: border-box;
+} 
+*/
+
+* {
+  /* cursor:default;     */
+  box-sizing: inherit;
+}
+ 
+ body {
+/*     font: small/1.3em Arial, Helvetica, sans-serif;
+    font: 0.9em Arial, Helvetica, sans-serif;
+ */    
+  font: 0.8em Arial, Helvetica, sans-serif;
+  margin:0;
+}
+
+div,ul,p {
+  margin:0;
+  padding:0;
+}
+
+a {
+  text-decoration:none;
+}
+
+button {
+  margin:0.5em;
+}
+
+.nodisplay_important{
+  display: none !important;
+}
+
+.nodisplay {
+  display: none;
+}
+
+ 
+input, body{
+/* Prevents text from being selected */
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+
+/* 
+   the box class is needed for startupbox, myExplorer, unlockbox, creatorloginbox, getqnakeybox, adminbox,
+    msgbox, yesnobox, loading, flashbox, endbox, unlockbox and for spinner div 
+*/
+
+.box {    
+  border:2px solid black;
+  position:absolute;
+  z-index:9000;
+  padding: 1em 2em;
+  background:#ddd;
+  box-shadow: 0px 0px 6px 3px #222;
+  -moz-box-shadow: 0px 0px 6px 3px #222;
+	-webkit-box-shadow: 0px 0px 6px 3px #222;
+  text-align:center;
+}
+
+
+/* 
+---------------------------
+Styles for the explorer which is used to open qna files.  It uses the jQuery File Tree Plugin which
+I downloaded from the internet.
+---------------------------
+ */ 
+
+#myExplorer{
+  cursor:default;    /*    Use normal arrow pointer */  
+  box-sizing: border-box;
+  /* display:flex;
+  align-items:center;
+  justify-content:center; */
+
+
+  z-index: 9999;
+  width:530px;
+  background-color:#f8f8f8; 
+  padding:10px;
+  text-align:left;
+}
+
+.myExp_div1 {
+  float: left;
+  margin: 0 18px;
+}
+
+.myExp_h3_cls1 {
+  height: 24px;
+  font-size:15px;
+  margin:0;
+}
+
+.myExp_div2 {
+  width: 225px;
+  height: 225px;
+  border: solid 2px #888;
+  background: #fff;
+  overflow: auto;
+
+  padding: 5px;
+}
+
+/* #folders_div {
+  padding-left: 10px;
+  margin-left: -10px;
+
+} */
+ 
+/* folder icons for closed and open */
+.fileTree li.directory { background: url(../icon/directory.png) left top no-repeat; }
+.fileTree li.expanded { background: url(../icon/folder_open.png) left top no-repeat; }
+
+/* .fileTree li.file { 
+//background: url(../icon/file.png) left top no-repeat; 
+}
+ */
+ 
+.fileTree li.wait { background: url(../icon/spinner.gif) left top no-repeat; }
+/* File Extensions - I will only allow qna file types */
+.fileTree li > span.file               { background: url(../icon/file.png) left top no-repeat; }
+.fileTree li  > span.ext_qna{ background: url(../icon/world-1.gif) left top no-repeat; }
+
+ .wait { 
+  background: url(../icon/spinner.gif) left top no-repeat; 
+ }
+
+.directory{
+  display: inline-block;
+  background: url(../icon/directory.png) left top no-repeat;
+  width:20px;
+  height:16px;
+  margin-bottom:-3px;
+  margin-right:-2px;
+}
+
+.itemName {
+  padding-left:2px;
+  padding-right:4px;
+  white-space:nowrap;
+}
+
+#itemPopup > span.itemName{
+  text-decoration:underline;
+}
+#itemPopup {
+  position:absolute;
+  background-color:#fff; 
+  z-index:10000;
+}
+
+#folders_div div.items > div {
+  position:relative;
+  margin-bottom:-1px;
+  white-space:nowrap;
+  height:19px;
+
+  /* margin-left: -10px; */
+}
+  
+#files_div li>span{
+  padding-left:19px;
+  padding-right:4px;
+  line-height: 19px;
+}
+
+#files_div li>span:hover{
+	background-color: #eee;
+}
+  
+.subcatlistdiv {
+  margin-left:10px;
+ }
+
+.itemName {
+  font-size:13px;
+}
+
+.chosen {
+  background-color: #464 !important;
+  color: white;
+}
+
+span.indx{
+  position:absolute;
+  width : 14px;
+}
+
+span {
+  margin:0;
+  padding:0;
+}
+
+.holder{
+  margin-left:16px;
+}
+
+.crisp{
+  shape-rendering:crispEdgeskdld;
+}
+
+/* 
+---------------------------
+Styles for message which displays while the DOM is loading.
+---------------------------
+ */
+#startupDiv{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:#ccc;
+  position:absolute;
+  z-index: 20000;
+  width:100%;
+  height:100%;
+}
+ 
+#egg{animation:changeFill 0.8s linear infinite alternate;}
+@keyframes changeFill{
+  0% {fill :#222;stroke:#000;stroke-width:10;}
+  100% {fill :#000;stroke:#222;stroke-width:20;}
+}
