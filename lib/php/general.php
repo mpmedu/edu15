@@ -144,7 +144,7 @@
     $_SESSION['sfpath'] = urldecode($_POST['fpath']);
     $fpath = $_SERVER['DOCUMENT_ROOT'] . '/' . $_SESSION['sfpath'];
     if (!file_exists($fpath)) {
-      $emsg="$fpath does not exist";
+      $errmsg="$fpath does not exist";
       goto be;
     }
     require_once 'fileClass.php';
@@ -252,7 +252,7 @@
     $mc =  connectToDB();
     if ($mc->connect_errno) {
       die('Connect Error (' . $mc->connect_errno . ') ' . $mc->connect_error);
-      $emsg="Connect error: " . $mc->connect_error;
+      $errmsg="Connect error: " . $mc->connect_error;
       goto be;
     }
   // $result['point'] .= ' '.'3';
@@ -261,7 +261,7 @@
     $stmt = $mc->stmt_init();   // this is optional but good practice, next must be prepare
     if($stmt->prepare($sql) === false) {
       trigger_error('Wrong SQL: ' . $sql . ' Error: ' . $mc->errno . ' ' . $mc->error, E_USER_ERROR);
-      $emsg='Wrong SQL: ' . $sql . ' Error: ' . $mc->errno . ' ' . $mc->error;
+      $errmsg='Wrong SQL: ' . $sql . ' Error: ' . $mc->errno . ' ' . $mc->error;
       goto be;
     }
     $stmt->bind_result($fid,$dbfpath,$dbcodebytes[1],$dbcodebytes[2],$dbcodebytes[3],$dbcodebytes[4]);
@@ -485,6 +485,9 @@
     
   case 'xxx':
     break;
+  case 'setSessionCompID':
+    $result['value'] = 'fail';  // for testing
+    break;
   }
   
   if (isset($stmt)) $stmt->close(); 
@@ -499,7 +502,7 @@ be:
   if (isset($mc)) $mc->close();
 
   $result['value'] = 'fail';
-  if (isset($emsg)) $result['emsg'] = $emsg;
+  if (isset($errmsg)) $result['errmsg'] = $errmsg;
   
   echo json_encode($result);
   exit;

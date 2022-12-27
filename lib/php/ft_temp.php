@@ -2,55 +2,17 @@
   session_start();
   header("content-type:application/json");
 
+  $data = json_decode(file_get_contents('php://input'), true);
+
   $todo = $_GET['todo'];
   $result = array('value' => 'success');
 
   switch( $todo) {
     
   // *****************************************************  
-  case 'getdircontents':
-    $dir = urldecode($_POST['dir']);
-    $only = "";
-    if (isset($_POST['only'])) {
-      $only = urldecode($_POST['only']);
-    }
-    $notdirs = "";
-    if (isset($_POST['notdirs'])) {
-      $notdirs = urldecode($_POST['notdirs']);
-    }
-    $root = $_SERVER['DOCUMENT_ROOT'] . '/';
-    //$root = __DIR__ . '/';
-    $fpath = $root . $dir;
-    $s= '<ul class="jqueryFileTree" style="display: none;">';
-    $ss= '<ul class="jqueryFileTree">';
-    if( file_exists($fpath) ) {
-      $files = scandir($fpath);
-      natcasesort($files);
-      if( count($files) > 2 ) { /* The first 2 files are . and .. */
-        foreach( $files as $file ) {
-          if(file_exists($fpath.$file) && $file != '.' && $file != '..') {
-            if (is_dir($fpath.$file)){
-              // Get all the directories in $s
-              if ($notdirs === '' || strpos($file,$notdirs) === false) {
-                $s .= '<li class="directory collapsed"><div rel="' . htmlentities($dir . $file) . '/">' . htmlentities($file) . '</div></li>';
-              }
-            } else { // not a directory so must be a file
-              $ext = strtolower(preg_replace('/^.*\./', '', $file));
-              if ($only === "" || strpos($only,'|'.$ext.'|') !== false) {
-                $ss .= '<li class="file ext_' . $ext. '"><div rel="' . htmlentities($dir . $file) . '">' . htmlentities($file) . '</div></li>';
-              }
-            }
-          }
-        }
-      }
-    }
-    $result['folders'] = $s . "</ul>";
-    $result['theFiles'] = $ss . "</ul>";
-    break;
-    
   // *****************************************************  
   case 'openfile':
-    $_SESSION['sfpath'] = urldecode($_POST['fpath']);
+    $_SESSION['sfpath'] = urldecode($data['fpath']);
     $fpath = $_SERVER['DOCUMENT_ROOT'] . '/' . $_SESSION['sfpath'];
     if (!file_exists($fpath)) {
       $errmsg="$fpath does not exist";
@@ -65,7 +27,7 @@
     $mf->getVars($result['ansCoder'],$result['numCats'],$result['subject'],$result['isRestricted'],
       $result['nFreeAccessQs'],$result['base'],$result['data'],$result['totalQs']);
     if ($result['isRestricted']) {
-      $stored = $_POST['stored'];   // localStorage
+      $stored = $data['stored'];   // localStorage
       //$result['pointReached'] = 0;
       $ss = str_replace([" ","/",".","\\"], "_", $_SESSION['sfpath']);
       if (isset($_SESSION[$ss])) {
@@ -115,7 +77,7 @@
   case 'setFree':
     // This sets a SESSION value for a restricted-access file that has been registered
     // It also sets the cookie value if $doCookie = 1
-    $doCookie = $_POST['doCookie'];
+    $doCookie = $data['doCookie'];
     $ss = str_replace([" ","/",".","\\"], "_", $_SESSION['sfpath']);
     if ($doCookie == 1) {
       //$result['docookie'] = $doCookie;
@@ -145,8 +107,8 @@
   // *****************************************************  
   case 'setSessionCompID':
     // this sets $_SESSION['compID'] which is needed to unlock restricted-access files
-    if (isset($_POST['compID'])) {
-      $_SESSION['compID'] = urldecode($_POST['compID']);
+    if (isset($data['compID'])) {
+      $_SESSION['compID'] = urldecode($data['compID']);
     }  
     break;
     
