@@ -185,7 +185,7 @@
   <!-- <script src="../../lib/js/myNamespace2.PP.adv.min.js"></script> -->
 
   <!-- <script src="../../lib/js/jquery-1.10.2.min.js"></script> -->
-  <script src="../../lib/js/jquery-1.10.2.min.js"></script>
+  <!-- <script src="../../lib/js/jquery-1.10.2.min.js"></script> -->
 
   <!-- <script src="../../lib/js/myJsLib1.js"></script>
   <script src="../../lib/js/common2022.12.07.js"></script>
@@ -198,10 +198,13 @@
 
   <!-- <script src="../../lib/js/jquery-1.10.2.min.js"></script> -->
 
+
+  <!-- <script src="../../lib/js/jquery-1.10.2.min.js"></script> -->
+  
   <script src="lib/js/myNamespace2.js"></script>
   <script src="lib/js/myJsLib1.js"></script>
-  <script src="lib/js/common2022.12.07.js"></script>
-  <!-- <script src="lib/js/common.js"></script> -->
+  <!-- <script src="lib/js/common2022.12.07.js"></script> -->
+  <script src="lib/js/common.jQfree.js"></script>
   <script src="lib/js/edumeta.js"></script>
   <script src="lib/js/edu.js"></script>
   <script src="lib/js/myExpl.js"></script>
