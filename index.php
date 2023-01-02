@@ -101,6 +101,7 @@
   
   <!-- dialogmask is used to mask the background when dialogs are shown -->
   <div id="dialogmask" class="nodisplay dialogmask"></div>
+  <div id="dialogmask2" class="nodisplay dialogmask2"></div>
     <!-- wrapper contains the content, at start up it is empty, then init() puts the info, then
          the startup dialog is shown  -->
   <div id="wrapper">
@@ -201,6 +202,7 @@
 
   <!-- <script src="../../lib/js/jquery-1.10.2.min.js"></script> -->
   
+  <!-- myNamespace2.js must be first and myJsLib1.js must be 2nd -->
   <script src="lib/js/myNamespace2.js"></script>
   <script src="lib/js/myJsLib1.js"></script>
   <!-- <script src="lib/js/common2022.12.07.js"></script> -->

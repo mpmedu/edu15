@@ -111,28 +111,9 @@
 
   <!--
    ********************************************
-  The html for the file explorer
+  The html for the file explorer, needed to open files on the server
    ********************************************
   -->
-  <!-- the file explorer needed to open files -->
-  <!--
-<div id="myExplorer" class="nodisplay box">
-  <div class="myExp_div1" style="margin:0 15px;" >
-    <h3 class="myExp_h3_cls1">Folders</h3>
-    <div id="folders_div" class="myExp_div2"></div>
-    <p><button style="margin-top:10px;" >Reset</button></p>
-  </div>
-  <div class="myExp_div1" style="margin-left:0; margin-right:15; float:right;">
-    <h3 class="myExp_h3_cls1">Files</h3>
-    <div id="files_div" class="myExp_div2"></div>
-    <p style="margin-bottom:0">Filename: <input id="fn_input" type="text" disabled="true" style="width:170px; padding-left:3px; margin:5px 0px 8px 0; color:black;"></p>
-    <p style="float:right"><button id="func1">Open</button><button id="canc1">Cancel</button> </p>
-  </div>
-  <div style="clear:both"></div>
-</div>
-  -->
-
-<!-- <div id="myExplorer" class="box nodisplay" style="left:100px;top:50px;"> -->
 
 <div id="myExplorer" class="box nodisplay">
   <div id = "itemPopup" class='nodisplay'></div>

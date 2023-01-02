@@ -12,13 +12,11 @@
   // *****************************************************  
   // *****************************************************  
   case 'getFolders':
-
   
     $f = array(0 => "rootDir");
     $pn = array(0 => 0);
     $ps = array(0 => 0);
     $nexti = 1;
-    
     
     $dir = $data['dir'];
     // $dir = urldecode($_POST['dir']);
@@ -35,8 +33,6 @@
     //$root = __DIR__ . '/';
     $fpath = $root . $dir;
     
-    //doFolder($fpath,0);
-    //doFolder2($fpath,0);
     doFolder3($fpath,0);
     
     $result['f'] = $f;
@@ -89,16 +85,12 @@
     break;
   }
   
-  if (isset($stmt)) $stmt->close(); 
-  if (isset($mc)) $mc->close();
   
-  if (isset($_SESSION['userin'])) $result['userin'] = $_SESSION['userin'];
+  // if (isset($_SESSION['userin'])) $result['userin'] = $_SESSION['userin'];
 
   echo json_encode($result);
   exit;
 be:
-  if (isset($stmt)) $stmt->close(); 
-  if (isset($mc)) $mc->close();
 
   $result['value'] = 'fail';
   if (isset($errmsg)) $result['errmsg'] = $errmsg;
@@ -107,98 +99,6 @@ be:
   exit;
 //***************************** end of un-function code *************************************
 
-  
-
-// function doFolder($folder,$fi){
-//   global $f;
-//   global $pn;
-//   global $ps;
-//   global $nexti;
-//   $subs = [];
-//   $n = 0;
-//   getSubs($folder,$subs,$n);
-//   if ($n > 0) {
-//     $ps[$fi] = $nexti;
-//     for ($i = 0; $i < $n; $i++){
-//       $np = $nexti + $i;
-//       $f[$np] = $subs[$i];
-//       $pn[$np] = $np + 1;
-//       $ps[$np] = 0;
-//       $lasti[$i] = $np;
-//     }
-//     $nexti = $nexti + $n;
-//     //$lasti = $nexti - 1;
-//     $pn[$nexti-1] = 0;
-//     for ($i = 0; $i < $n; $i++){
-//       doFolder($folder. $subs[$i] . '/' ,$lasti[$i]);
-//     }
-//   }
-// }
-
-// function getSubs($folder,&$subs,&$n){
-//   global $notdirs;
-//   // $subs = [];
-//   // $n = 0;
-//   //if( file_exists($folder) ) {
-//     $files = scandir($folder);
-//     //natcasesort($files);
-//     if( count($files) > 2 ) { /* The first 2 files are . and .. */
-//       $files = array_diff($files, Array( ".", ".." )); 
-
-//       foreach( $files as $file ) {
-//         //if(file_exists($folder.$file) && $file != '.' && $file != '..') {
-//           if (is_dir($folder.$file)){
-//             // Get all the directories in $s
-//             if ($notdirs === '' || strpos($file,$notdirs) === false) {
-//               $subs[] = $file;
-//               $n++;
-//             }
-//           }
-//         //}
-//       }
-//     //}
-//   }
-// }
-
-// function doFolder2($folder,$fi){
-//   global $f;
-//   global $pn;
-//   global $ps;
-//   global $nexti;
-//   global $notdirs;
-//   $subs = [];
-//   $n = 0;
-//   //getSubs($folder,$subs,$n);
-//   $files = scandir($folder);
-//   //natcasesort($files);
-//   if( count($files) > 2 ) { /* The first 2 files are . and .. */
-//     $files = array_diff($files, Array( ".", ".." )); 
-//     foreach( $files as $file ) {
-//       if (is_dir($folder.$file)){
-//         if ($notdirs === '' || strpos($file,$notdirs) === false) {
-//           $subs[] = $file;
-//           $n++;
-//         }
-//       }
-//     }
-//   }
-  
-//   if ($n > 0) {
-//     $ps[$fi] = $nexti;
-//     for ($i = 0; $i < $n; $i++){
-//       $np = $nexti + $i;
-//       $f[$np] = $subs[$i];
-//       $pn[$np] = $np + 1;
-//       $ps[$np] = 0;
-//       $lasti[$i] = $np;
-//     }
-//     $nexti = $nexti + $n;
-//     $pn[$nexti-1] = 0;
-//     for ($i = 0; $i < $n; $i++){
-//       doFolder2($folder. $subs[$i] . '/' ,$lasti[$i]);
-//     }
-//   }
-// }
 
 function doFolder3($folder,$fi){
   // using a stack is better for performance than using recursion
@@ -250,8 +150,6 @@ function doFolder3($folder,$fi){
     }
   }
 }
-  
-  
 
   
 ?>

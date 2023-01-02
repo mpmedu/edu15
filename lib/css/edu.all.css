@@ -1,35 +1,36 @@
-
 /* PROJECTS: EzFind, Categories, my
 ##############################################
           shared styles
 ##############################################
  */
 
- 
+
 body {
   font: 0.8em Arial, Helvetica, sans-serif;
-  margin:0;
+  margin: 0;
 }
 
 #debug {
-  color:grey;
+  color: grey;
 }
 
-div,ul,p {
-  margin:0;
-  padding:0;
-  cursor:default;
+div,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+  cursor: default;
 }
 
 a {
-  text-decoration:none;
+  text-decoration: none;
 }
 
 button {
-  margin:0.5em;
+  margin: 0.5em;
 }
 
-.nodisplay_important{
+.nodisplay_important {
   display: none !important;
 }
 
@@ -38,56 +39,63 @@ button {
 }
 
 
-input, body{
-/* Prevents text from being selected */
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+input,
+body {
+  /* Prevents text from being selected */
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
 /* input.textinput , select.textinput{ */
 .textinput {
-  color:black;
+  color: black;
   width: 95%;
   font-family: Cambria, "Times New Roman", Times, serif;
   font-size: 1.2em;
   border: 1px solid #666;
-  padding-left:3px;
+  padding-left: 3px;
 }
 
 input[readonly="true"] {
-  background-color:#ffc;
+  background-color: #ffc;
 }
 
-#bodymask{
-  z-index:7000;
-  position:fixed;
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
+#bodymask {
+  z-index: 7000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 
 .box {
-  z-index:9000;
-  border:2px solid black;
-  position:absolute;
+  z-index: 9000;
+  border: 2px solid black;
+  position: absolute;
   padding: 1em 2em;
-  background:#eee;
-  box-shadow:         0px 0px 6px 3px #222;
-  -moz-box-shadow:    0px 0px 6px 3px #222;
-	-webkit-box-shadow: 0px 0px 6px 3px #222;
-  text-align:center;
+  background: #eee;
+  box-shadow: 0px 0px 6px 3px #222;
+  -moz-box-shadow: 0px 0px 6px 3px #222;
+  -webkit-box-shadow: 0px 0px 6px 3px #222;
+  text-align: center;
 }
 
 /* shared styles  END 
-   XXXXXXXXXXXXXXXXXXXXXXXXX */ 
+   XXXXXXXXXXXXXXXXXXXXXXXXX */
 
-   
+
 
 
 
@@ -95,25 +103,47 @@ input[readonly="true"] {
 ##############################################
           Content
 ##############################################
- */ 
-   
+ */
+
 #wrapper {
-  overflow:hidden;
-  background:white;
-  position:relative;
+  overflow: hidden;
+  background: white;
+  position: relative;
 }
-      
-   
+
+
 #wrappermask {
-  position:absolute;
-  background-color:rgba(0,0,0,0.1);
-  z-index:3000;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 3000;
 }
 
 #dialogmask {
-  position:absolute;
-  background-color:rgba(20,20,20,0.7);
-  z-index:3000;
+  position: absolute;
+  background-color: rgba(20, 20, 20, 0.7);
+  z-index: 3000;
+}
+
+#dialogmask2 {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* bottom:0;
+  right:0; */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(80, 80, 80, 0.7);
+  z-index: 3000;
+  /* display:flex; */
+  height: 100vh;
+  width: 100vw;
+}
+
+
+html, body {
+  width: 100vw;
+  min-height: 100vh;
 }
 
 
@@ -121,489 +151,495 @@ input[readonly="true"] {
 
 
 
- 
 
-   
-   
-   
+
 /* PROJECTS: All
 ##############################################
           Audio volume slider
 ##############################################
 Not really needed for this project
  */
- 
+
 .roundCorners {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  border-radius: 10px; /* future proofing */
-  -khtml-border-radius: 10px; /* for old Konqueror browsers */
- }
+  border-radius: 10px;
+  /* future proofing */
+  -khtml-border-radius: 10px;
+  /* for old Konqueror browsers */
+}
 
 #cont {
-  position:relative;
-  width:100px; 
-  height:12px;
-  padding:1px;
+  position: relative;
+  width: 100px;
+  height: 12px;
+  padding: 1px;
   border: 2px solid #888;
-  background-color:white;
+  background-color: white;
 }
 
 #ball {
-  position:relative; 
-  width:12px; 
-  height:12px; 
-  background-color:#1b1b1b;
- }
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: #1b1b1b;
+}
 
 .cont_class {
-  position:relative;
-  width:80px; 
-  height:12px;
-  padding:1px;
+  position: relative;
+  width: 80px;
+  height: 12px;
+  padding: 1px;
   border: 2px solid #888;
-  background-color:white;
+  background-color: white;
 }
 
 .ball_class {
-  position:relative; 
-  width:12px; 
-  height:12px; 
-  background-color:#1b1b1b;
- }
- 
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: #1b1b1b;
+}
+
 /**** Styles for the box for getting the settings for the audio volumes */
 /* not used by the categories projecr */
- .outer_sd {
-  width:245px;
-  height:2.5em;
-  position:relative;
+.outer_sd {
+  width: 245px;
+  height: 2.5em;
+  position: relative;
 }
- 
- .inner_sd {
-   position:absolute; 
-   top:-1px;
-   right:2px;
- }
- 
+
+.inner_sd {
+  position: absolute;
+  top: -1px;
+  right: 2px;
+}
+
 /* Audio volume slider.  END 
-   XXXXXXXXXXXXXXXXXXXXXXXXX */ 
-   
+   XXXXXXXXXXXXXXXXXXXXXXXXX */
+
 
 /* PROJECTS: EzFind, Categories, my
 ##############################################
    the box and mask for messages and yesno
 ##############################################
- */ 
-#msgbox {        /* for messages and yes/no box */      
-  z-index:10000;
-  text-align:center;
-  border:2px solid black;
+ */
+#msgbox {
+  /* for messages and yes/no box */
+  z-index: 10000;
+  text-align: center;
+  border: 2px solid black;
   border-radius: 4px;
-  position:absolute;
+  position: absolute;
   padding: 1em 3em;
-	-webkit-box-shadow: 0px 0px 6px 3px #222;
+  -webkit-box-shadow: 0px 0px 6px 3px #222;
   -moz-box-shadow: 0px 0px 6px 3px #222;
   box-shadow: 0px 0px 6px 3px #222;
 }
 
-#msgboxmask {        /* for messages and yes/no box */
-  z-index:9500;
-  top:0; left:0; 
-  position:absolute;
-  background-color:#aaa;
-  opacity:0.6;
+#msgboxmask {
+  /* for messages and yes/no box */
+  z-index: 9500;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #aaa;
+  opacity: 0.6;
 }
 
- 
+
 /* PROJECTS: EzFind, Categories, my
 ##############################################
    the loading spinner and its mask
 ##############################################
- */ 
+ */
 #loading {
   z-index: 11000;
-  position:absolute;
+  position: absolute;
 }
-      
-#loadingmask{
-  z-index:10500;
-  top:0; 
-  left:0; 
-  position:absolute;
-  background-color:#555;
-  opacity:0.4;
-  width:100%;
-  height:100%;
+
+#loadingmask {
+  z-index: 10500;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #555;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
 }
 
 
- 
+
 /* Global 
    ======================================= */
- 
+
 
 #topdiv {
-  background-color:#1b1b1b;
+  background-color: #1b1b1b;
   height: 80px;
-  position:relative;  /* needed  -  because it contains absolute elements */
-  border-bottom:4px solid #bbb;
+  position: relative;
+  /* needed  -  because it contains absolute elements */
+  border-bottom: 4px solid #bbb;
 }
 
 /*  title, TestU, and the subject/pageName */
 
 #siteName {
-  color:white;
-  text-shadow:2px 2px 0px #bbb;
-  left:-20000px;
-  font: 3.5em  Cambria, 'Times New Roman', serif;
-  font-weight:bold;
+  color: white;
+  text-shadow: 2px 2px 0px #bbb;
+  left: -20000px;
+  font: 3.5em Cambria, 'Times New Roman', serif;
+  font-weight: bold;
   margin: 0;
-  position:absolute;
+  position: absolute;
   padding-top: 10px;
   z-index: 20;
 }
 
 #pageName {
-  left:-20000px;
-  background-color:#1b1b1b;
-  font: 2.5em  Cambria, 'Times New Roman', serif;
-  font-weight:bold;
+  left: -20000px;
+  background-color: #1b1b1b;
+  font: 2.5em Cambria, 'Times New Roman', serif;
+  font-weight: bold;
   margin: 0 15px;
   margin: 0 1%;
-  position:absolute;
-  color:#bbb;
+  position: absolute;
+  color: #bbb;
   padding-top: 23px;
   padding-right: 10px;
-  white-space:nowrap;
-  overflow:auto;
+  white-space: nowrap;
+  overflow: auto;
 }
 
 /* container for number of qs in the test and the score */
 #scorecontainer {
-  position:absolute;
-  top:11px;
-  color:white;
-  z-index:5000;
+  position: absolute;
+  top: 11px;
+  color: white;
+  z-index: 5000;
 }
 
-#score_input{
-  width:30px;
-  font-weight:bold;
-  text-align:right;
-  padding-right:3px;
-  color:black;
+#score_input {
+  width: 30px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 3px;
+  color: black;
 }
 
-#thescore{
-  background-color:#1b1b1b;
-  font: 2em  sans serif,Arial, sans serif;
+#thescore {
+  background-color: #1b1b1b;
+  font: 2em sans serif, Arial, sans serif;
   padding: 0 0.5em;
 }
 
 #topmenucontainer {
-  padding-top:7px;
-  background-color:#1b1b1b;
-  position:absolute;
+  padding-top: 7px;
+  background-color: #1b1b1b;
+  position: absolute;
   z-index: 130;
 }
 
 #fn {
-  position:relative;
+  position: relative;
   display: block;
-  padding:5px 0;
-  margin-top:5px;
-	color: #e6e6e6;
+  padding: 5px 0;
+  margin-top: 5px;
+  color: #e6e6e6;
 }
 
 input#fn_output {
-  background-color:#eee;
-  width:162px; 
-  padding-left:3px; 
-  margin-left:3px;
-  color:black;
+  background-color: #eee;
+  width: 162px;
+  padding-left: 3px;
+  margin-left: 3px;
+  color: black;
 }
 
 #gamecontainer {
-  background-color:#1b1b1b;
-  position:absolute;
+  background-color: #1b1b1b;
+  position: absolute;
 }
 
 #gobutton {
-  width:50px;
-  height:38px;
+  width: 50px;
+  height: 38px;
   margin: 6px 0;
   text-align: center;
-  vertical-align:middle;
+  vertical-align: middle;
 }
 
 #clock {
-  width:43px;
-  text-align:right;
-  background-color:#eee;
-  padding-right:3px;
-  font-weight:bold;
-  color:black;
+  width: 43px;
+  text-align: right;
+  background-color: #eee;
+  padding-right: 3px;
+  font-weight: bold;
+  color: black;
 }
 
 #debug {
-  background-color:#1b1b1b;
-  font: 0.5em  Cambria, 'Times New Roman', serif;
-  position:absolute;
-  color:#cb4;
+  background-color: #1b1b1b;
+  font: 0.5em Cambria, 'Times New Roman', serif;
+  position: absolute;
+  color: #cb4;
   z-index: 130;
 }
 
 /* menu items in topdiv */
 
 #topmenumask {
-  background-color: rgba(0,0,0,0.2);
-  position:absolute;
-  z-index:6000;
- }
- 
-#toprightmenumask {
-  background-color: rgba(0,0,0,0.2);
-  position:absolute;
-  right:0;
-  z-index:6000;
- }
- 
-#gamecontainermask{
-  background-color: rgba(0,0,0,0.2);
-  position:absolute;
-  margin:6px 0;
-  z-index:6000;
- }
- 
-#topdiv #theMenu {
-	list-style: none;
-  z-index:5000;
-  position:relative;
-  border-right: 1px solid #888;
- }
- 
-#topdiv ul li {
-	font:  12px/16px  Geneva, Arial,"Helvetica Neue", Helvetica,Cambria,   sans-serif;
-	display: inline-block;
-	position: relative;
-	cursor: pointer;
-	border-top: 1px solid #888;
-	border-left: 1px solid #888;
-  border-bottom:1px solid #888;
-	color: #e6e6e6;
-  background-color:black;
-	padding: 6px 11px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 6000;
 }
 
- #topdiv ul li:hover  {
-	color: white;
-  border:1px solid yellow;
-  padding-right:10px;
+#toprightmenumask {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 0;
+  z-index: 6000;
+}
+
+#gamecontainermask {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  margin: 6px 0;
+  z-index: 6000;
+}
+
+#topdiv #theMenu {
+  list-style: none;
+  z-index: 5000;
+  position: relative;
+  border-right: 1px solid #888;
+}
+
+#topdiv ul li {
+  font: 12px/16px Geneva, Arial, "Helvetica Neue", Helvetica, Cambria, sans-serif;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  border-top: 1px solid #888;
+  border-left: 1px solid #888;
+  border-bottom: 1px solid #888;
+  color: #e6e6e6;
+  background-color: black;
+  padding: 6px 11px;
+}
+
+#topdiv ul li:hover {
+  color: white;
+  border: 1px solid yellow;
+  padding-right: 10px;
 }
 
 #topdiv ul li ul {
-	padding: 0;
-	position: absolute;
-	top: 29px;
-	left: -1px;
-	width: 120px;   /* default width of dropdown menu */
-	-webkit-box-shadow: 0px 1px 2px 1px #555;
-  -moz-box-shadow:    0px 1px 2px 1px #555;
-  box-shadow:         0px 1px 2px 1px #555;
-	border-top: 1px solid #888;
+  padding: 0;
+  position: absolute;
+  top: 29px;
+  left: -1px;
+  width: 120px;
+  /* default width of dropdown menu */
+  -webkit-box-shadow: 0px 1px 2px 1px #555;
+  -moz-box-shadow: 0px 1px 2px 1px #555;
+  box-shadow: 0px 1px 2px 1px #555;
+  border-top: 1px solid #888;
   border-right: 1px solid #888;
-	z-index: 5000;
+  z-index: 5000;
 }
 
-#topdiv ul li ul.ul_2 {  /* this is for the Settings menu  */   
-	width: 150px;
+#topdiv ul li ul.ul_2 {
+  /* this is for the Settings menu  */
+  width: 150px;
 }
 
 #topdiv ul li ul li {
-	display: block;
-	float: none;
+  display: block;
+  float: none;
   z-index: 100;
 }
 
 #topdiv ul li:hover ul {
-	display: block;
+  display: block;
 }
 
 /* Content
    ========================================================================== */
-   
+
 #wrappermask {
-  position:absolute;
-  background-color:rgba(0,0,0,0.1);
-  z-index:3000;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 3000;
 }
 
 #dialogmask {
-  position:absolute;
-  background-color:rgba(20,20,20,0.7);
-  z-index:3000;
+  position: absolute;
+  background-color: rgba(20, 20, 20, 0.7);
+  z-index: 3000;
 }
-   
+
 #wrapper {
-  padding-bottom:30px;
-  padding-top:20px;
+  padding-bottom: 30px;
+  padding-top: 20px;
 }
-      
+
 #bottomdiv {
-  background-color:#1b1b1b;
-  color:white;
-  padding:1px 10px;
-  border-top:4px solid #bbb;
-  position:relative;
+  background-color: #1b1b1b;
+  color: white;
+  padding: 1px 10px;
+  border-top: 4px solid #bbb;
+  position: relative;
 }
-    
+
 /* class for the categories and checklist dialogs
 ===================================== */
 .container_class {
-  position:absolute;
+  position: absolute;
   z-index: 9999;
-  border:3px solid black;
+  border: 3px solid black;
 }
-  
+
 /* for showing the checklist dialog
 ==================================== 
 */
 #checklist_container {
-  width:425px;
+  width: 425px;
 }
 
 #checklistDialog {
-  border:2px solid #ccc;
-  overflow:auto;
+  border: 2px solid #ccc;
+  overflow: auto;
 }
 
 .check_name {
-  display:inline-block;
-  width:300px;
-  overflow:hidden;
-  padding-left:6px;
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+  padding-left: 6px;
 }
 
 .al_cb {
-  display:inline-block;
-  width:60px;
-  padding-left:4px;
+  display: inline-block;
+  width: 60px;
+  padding-left: 4px;
 }
 
 .co_cb {
-  display:inline-block;
-  padding-left:10px;
+  display: inline-block;
+  padding-left: 10px;
 }
 
 /* dialog for showing the categories
 ===================================== */
- 
+
 #catlist_container {
   width: 410px;
 }
 
 #catlistDialog {
-  border:2px solid #ccc;
-  overflow:auto;
+  border: 2px solid #ccc;
+  overflow: auto;
 }
 
 .cat_name {
-  display:inline-block;
-  width:285px;
-  overflow:hidden;
-  padding-left:6px;
+  display: inline-block;
+  width: 285px;
+  overflow: hidden;
+  padding-left: 6px;
 }
 
 .numQs {
-  display:inline-block;
-  width:40px;
-  padding-right:15px;
-  text-align:right;
+  display: inline-block;
+  width: 40px;
+  padding-right: 15px;
+  text-align: right;
 }
 
 .selected_cb {
-  display:inline-block;
-  padding-left:15px;
+  display: inline-block;
+  padding-left: 15px;
 }
 
 
- /* style for the button in categories and checklist dialogs
+/* style for the button in categories and checklist dialogs
  ============================================================*/
 button.butt_class1 {
   padding: 2px;
-  margin:5px;
-  float:right;
+  margin: 5px;
+  float: right;
 }
 
- /* the next two rules are for getting the number of questions and getting the time allowed and the audio volume
+/* the next two rules are for getting the number of questions and getting the time allowed and the audio volume
  ===========================================================================================*/
-.div_nq_ta_av{
-  position:absolute;
-  background-color:white;
-  border:solid 3px #000;
-  z-index:9000;
+.div_nq_ta_av {
+  position: absolute;
+  background-color: white;
+  border: solid 3px #000;
+  z-index: 9000;
 }
+
 .input_nq_ta {
-  width:35px;
-  text-align:right;
-  padding-right:3px;
-  background-color:#e6e6e6; 
-  border:solid 2px #888;
+  width: 35px;
+  text-align: right;
+  padding-right: 3px;
+  background-color: #e6e6e6;
+  border: solid 2px #888;
 }
 
 .input_clb {
-  width:85px;
-  padding-right:3px;
-  background-color:#e6e6e6; 
-  border:solid 2px #888;
+  width: 85px;
+  padding-right: 3px;
+  background-color: #e6e6e6;
+  border: solid 2px #888;
 }
 
- /* style for getting the key to unlock a restricted-access file
+/* style for getting the key to unlock a restricted-access file
  ===============================================================*/
 .input_key {
-  width:160px;
-  padding-right:1px;
-  padding-left:3px;
-  background-color:#eeeeee;
-  border:solid 2px #888;
-  font-weight:bold;
+  width: 160px;
+  padding-right: 1px;
+  padding-left: 3px;
+  background-color: #eeeeee;
+  border: solid 2px #888;
+  font-weight: bold;
   font-family: Cambria, 'Times New Roman';
   font-size: 1.1em;
 }
 
- /* styles for showing the information at start, ie startupbox - also used for the unlockbox
+/* styles for showing the information at start, ie startupbox - also used for the unlockbox
  ==============================================*/
 .boxHead1_class {
   padding: 0.2em 0;
-  font: 1.2em  Cambria, 'Times New Roman', serif;
-  font-weight:bold;
-  text-decoration:underline;
+  font: 1.2em Cambria, 'Times New Roman', serif;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .boxContent1_class {
-  font: 1.1em  Cambria, 'Times New Roman', serif;
-  width:570px;
+  font: 1.1em Cambria, 'Times New Roman', serif;
+  width: 570px;
 }
 
 
- /* style for showing the information at start 
+/* style for showing the information at start 
  ==============================================*/
 .info_class {
-  display:inline-block;
+  display: inline-block;
   margin: 0 6% 0.5em 3em;
   padding: 0.2em 0;
-  font: 1.2em  Cambria, 'Times New Roman', serif;
-  font-weight:bold;
-  text-decoration:underline;
+  font: 1.2em Cambria, 'Times New Roman', serif;
+  font-weight: bold;
+  text-decoration: underline;
   cursor: pointer;
 }
 
 .content_class {
   margin: -0.6em 6% 0.5em 3em;
   padding: 0 0.5em;
-  font: 1.1em  Cambria, 'Times New Roman', serif;
-  width:530px;
+  font: 1.1em Cambria, 'Times New Roman', serif;
+  width: 530px;
 }
 
 .contact_class {
@@ -615,33 +651,33 @@ button.butt_class1 {
     msgbox, yesnobox, loading, flashbox, endbox, unlockbox and for spinner div 
 */
 
-.box {    
-  border:2px solid black;
-  position:absolute;
-  z-index:9000;
+.box {
+  border: 2px solid black;
+  position: absolute;
+  z-index: 9000;
   padding: 1em 2em;
-  background:#ddd;
-  box-shadow:         0px 0px 6px 3px #222;
-  -moz-box-shadow:    0px 0px 6px 3px #222;
-	-webkit-box-shadow: 0px 0px 6px 3px #222;
-  text-align:center;
+  background: #ddd;
+  box-shadow: 0px 0px 6px 3px #222;
+  -moz-box-shadow: 0px 0px 6px 3px #222;
+  -webkit-box-shadow: 0px 0px 6px 3px #222;
+  text-align: center;
 }
 
 
 /* style for flashbox
 ====================== */
-#flashbox {     
-  z-index:10000;
-  width:auto;
-  text-align:center;
+#flashbox {
+  z-index: 10000;
+  width: auto;
+  text-align: center;
 }
 
 /* style for endbox
 ====================== */
-#endbox {     
-  z-index:9000;
-  width:auto;
-  text-align:center;
+#endbox {
+  z-index: 9000;
+  width: auto;
+  text-align: center;
   background-color: #eee;
 }
 
@@ -651,15 +687,15 @@ button.butt_class1 {
 Styles for the explorer which is used to open qna files.  It uses the jQuery File Tree Plugin which
 I downloaded from the internet.
 ---------------------------
- */ 
+ */
 
-#myExplorer{
-  position:absolute;
+#myExplorer {
+  position: absolute;
   z-index: 9999;
-  width:530px;
-  background-color:#f8f8f8; 
-  padding:10px;
-  text-align:left;
+  width: 530px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  text-align: left;
 }
 
 .myExp_div1 {
@@ -679,36 +715,42 @@ I downloaded from the internet.
   overflow: auto;
   padding: 5px;
 }
-      
+
 ul.jqueryFileTree {
-	font-family: Verdana, sans-serif;
-	font-size: 11px;
-	line-height: 18px;
-	padding: 0px;
-	margin: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+  line-height: 18px;
+  padding: 0px;
+  margin: 0px;
 }
 
 ul.jqueryFileTree li {
-	list-style: none;
-	padding: 0px;
-	padding-left: 20px;
-	margin: 0px;
-	white-space: nowrap;
+  list-style: none;
+  padding: 0px;
+  padding-left: 20px;
+  margin: 0px;
+  white-space: nowrap;
 }
 
 ul.jqueryFileTree li div {
-  cursor:default;
+  cursor: default;
   display: block;
-	padding: 0px 2px;
+  padding: 0px 2px;
 }
 
-ul.jqueryFileTree li > div:hover {
-	background: #ee9;
+ul.jqueryFileTree li>div:hover {
+  /* background: #ee9; */
+  background-color: #ee9;
 }
 
-li > div.selected {
+/* li > div.selected {
 	background: #ddd !important;
-}
+} */
+
+/* li > span.selected {
+	background-color: #ddd !important;
+} */
+
 
 /* Core Styles */
 
@@ -718,79 +760,88 @@ li > div.selected {
 .jqueryFileTree li.wait { background: url(../../res/spinner.gif) left top no-repeat; }
 .jqueryFileTree li.ext_qna { background: url(../../res/world-1.gif) left top no-repeat; }
  */
-.jqueryFileTree li.directory { background: url(res/folder.png) left top no-repeat; }
-.jqueryFileTree li.expanded { background: url(res/folder_open.png) left top no-repeat; }
+.jqueryFileTree li.directory {
+  background: url(res/folder.png) left top no-repeat;
+}
+
+.jqueryFileTree li.expanded {
+  background: url(res/folder_open.png) left top no-repeat;
+}
 
 /* .jqueryFileTree li.file { background: url(../../edu/edu14/res/file.png) left top no-repeat; }
 .jqueryFileTree li.wait { background: url(../../edu/edu14/res/spinner.gif) left top no-repeat; }
  */
 /* File Extensions - I will only allow qna file types */
-.jqueryFileTree li.ext_qna { background: url(res/world-1.gif) left top no-repeat; }
+.jqueryFileTree li.ext_qna {
+  background: url(res/world-1.gif) left top no-repeat;
+}
 
 
 /* 
 ---------------------------
 Styles for displaying the question and options.
 ---------------------------
- */ 
+ */
 
-.q  {
-  padding:1.4em;
-  padding-left:2.6em;
-  padding-right:3.2em;
-  display:table;
+.q {
+  padding: 1.4em;
+  padding-left: 2.6em;
+  padding-right: 3.2em;
+  display: table;
 }
 
-.qq{padding:0.4em;}
-
-.qt{
-  cursor:default;
+.qq {
+  padding: 0.4em;
 }
 
-.opts{
+.qt {
+  cursor: default;
+}
+
+.opts {
   padding: 1em 3em;
 }
 
-.qo_cell_text{
-  white-space:pre-wrap;
+.qo_cell_text {
+  white-space: pre-wrap;
   padding-top: 12px;
 }
 
-.qo_cell_picture{
-  display:table-cell;
-  vertical-align:top;
-  padding-left:15px;
+.qo_cell_picture {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 15px;
 }
 
-.qo_outer_text{
-  display:table-cell;
-  vertical-align:top;
-  padding-left:18px;
+.qo_outer_text {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 18px;
 }
 
-.n_cell{
-  font:1.3em  Cambria, 'Times New Roman', serif;
-  display:table-cell;
-  position:relative;
-  vertical-align:top;
-  padding-right:8px;
+.n_cell {
+  font: 1.3em Cambria, 'Times New Roman', serif;
+  display: table-cell;
+  position: relative;
+  vertical-align: top;
+  padding-right: 8px;
 }
 
-.n_format{
+.n_format {
   padding: 3px 8px;
-  border:4px solid;
-  margin:0.2em 0em;
-  border-radius:5px 5px;
+  border: 4px solid;
+  margin: 0.2em 0em;
+  border-radius: 5px 5px;
 }
 
 .opt_class {
   border-width: 2px 3px 3px 2px;
-  border-color:rgba(0, 0, 0, 0);
-  border-style:outset;
-  padding:0.4em 0.9em;
-  margin-right:1.5em;
-  display:table;
-  cursor:pointer;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: outset;
+  padding: 0.4em 0.9em;
+  margin-right: 1.5em;
+  display: table;
+  cursor: pointer;
 }
 
 /* 
@@ -799,20 +850,31 @@ Styles for message which displays while the DOM is loading.
 ---------------------------
  */
 
- /* now in edu.css.all
-  #startupDiv{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background-color:#ccc;
-  position:absolute;
+#startupDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+  position: absolute;
   z-index: 20000;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
-#egg{animation:changeFill 0.8s linear infinite alternate;}
-@keyframes changeFill{
-  0% {fill :#222;stroke:#000;stroke-width:10;}
-  100% {fill :#000;stroke:#222;stroke-width:20;}
-} */
+#egg {
+  animation: changeFill 0.8s linear infinite alternate;
+}
+
+@keyframes changeFill {
+  0% {
+    fill: #222;
+    stroke: #000;
+    stroke-width: 10;
+  }
+
+  100% {
+    fill: #000;
+    stroke: #222;
+    stroke-width: 20;
+  }
+}
