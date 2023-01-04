@@ -111,7 +111,7 @@
   
   <div id="bottomdiv">
     <br>
-    <span id="Footer1_Copyright">� <?php echo YR; ?>  All rights reserved.</span>  
+    <span id="Footer1_Copyright">Copyright <?php echo YR; ?>  All rights reserved.</span>  
     <br><br>
     <div style="position:absolute; top:7px; right:30px; text-align:center;">
       <p style="fontsize:8px;">Audio volume</p>
