@@ -698,7 +698,7 @@ I downloaded from the internet.
 ---------------------------
  */
 
-#myExplorer {
+/* #myExplorer {
   position: absolute;
   z-index: 9999;
   width: 530px;
@@ -745,30 +745,12 @@ ul.jqueryFileTree li div {
   cursor: default;
   display: block;
   padding: 0px 2px;
-}
+} */
 
-ul.jqueryFileTree li>div:hover {
-  /* background: #ee9; */
+/* ul.jqueryFileTree li>div:hover {
   background-color: #ee9;
 }
 
-/* li > div.selected {
-	background: #ddd !important;
-} */
-
-/* li > span.selected {
-	background-color: #ddd !important;
-} */
-
-
-/* Core Styles */
-
-/* .jqueryFileTree li.directory { background: url(../../res/folder.png) left top no-repeat; }
-.jqueryFileTree li.expanded { background: url(../../res/folder_open.png) left top no-repeat; }
-.jqueryFileTree li.file { background: url(../../res/file.png) left top no-repeat; }
-.jqueryFileTree li.wait { background: url(../../res/spinner.gif) left top no-repeat; }
-.jqueryFileTree li.ext_qna { background: url(../../res/world-1.gif) left top no-repeat; }
- */
 .jqueryFileTree li.directory {
   background: url(res/folder.png) left top no-repeat;
 }
@@ -777,13 +759,9 @@ ul.jqueryFileTree li>div:hover {
   background: url(res/folder_open.png) left top no-repeat;
 }
 
-/* .jqueryFileTree li.file { background: url(../../edu/edu14/res/file.png) left top no-repeat; }
-.jqueryFileTree li.wait { background: url(../../edu/edu14/res/spinner.gif) left top no-repeat; }
- */
-/* File Extensions - I will only allow qna file types */
 .jqueryFileTree li.ext_qna {
   background: url(res/world-1.gif) left top no-repeat;
-}
+} */
 
 
 /* 

@@ -271,10 +271,7 @@ c) Question/Options sounds
 <!-- to display the question -->
 <div id="tem_q"  class="nodisplay">
   <div class="q">
-
-  <!-- <div id="qq0" class="qq" style="position:relative;padding-left:25px;"> -->
-  <div class="qq" style="position:relative;padding-left:25px;">
-
+  <div id="qq{n}" class="qq" style="position:relative;padding-left:25px;">
     <div class="" style="position:absolute; top:8px;left:15px;">{si}</div>
     <div class="qo_outer_text {offstyle}">
       <div class="qt qo_cell_text q_cell_text">{q}</div>
@@ -287,7 +284,6 @@ c) Question/Options sounds
 <!-- to display an option, each option needs one of these -->
 <div id="tem_opt" class="nodisplay">
   <div id="opt_div{n}" class="opt_class opt_class2">
-  <!-- <div class="opt_class opt_class2"> -->
     <div class="n_cell">
       <div id="opt_num{n}" class="n_format n_format2">{n}</div>
       <div class="" style="position:absolute; top:4px;right:-10px;">{si}</div>
